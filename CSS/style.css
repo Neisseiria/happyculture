@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=DynaPuff:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html, body{
+  min-height: 100vh;
+}
+body{
+    font-family: "Baloo 2", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    background-color: #FFCF56;
+}
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: HEADER::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+header{
+grid-column: 1/3;
+grid-row: 1 ;
+max-height: 15vh;
+background-color: #fffbeb;
+display: flex;
+align-items: center;
+padding: 2rem;
+border-radius: 40px 40px 0px 0px;
+}
+
+.logo_header{
+    max-height: 7rem;
+    max-width: auto;
+}
+
+.liens-nav{
+    display: flex;
+    gap: 3rem;
+    margin-left: auto;
+    font-size: 1.5rem;
+}
+
+.liens-nav a {
+    text-decoration: none;
+    color: #383838;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    position: relative; /* pour placer la ligne dessous */
+    font-weight: bold;
+    padding-bottom: 0.3rem; /* espace entre le texte et la ligne */
+}
+
+/* Ligne jaune sous chaque lien */
+.liens-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.5px; /* Épaisseur de la ligne */
+  width: 100%;
+  background-color: #FFCF56; /* Couleur jaune */
+}
+
+.liens-nav a:hover{
+  text-shadow: 1px 1px 1px #FFCF56;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: MAIN::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  background-color: #fffbeb;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  min-height: 70vh; /*permet au footer de ne pas manger le main*/
+  padding-top: 1rem;
+
+}
+
+main h1,h2{
+    text-align: center;
+    margin-top: 0;  /* Réduit l'espace au-dessus des titres */
+}
+main h1{
+    font-family: "DynaPuff", system-ui;
+    font-size: 2.5rem;
+}
+main h2{
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+}
+
+main .bouton-accueil a{
+    text-align: center;
+}
+
+.contenu_accueil {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.miel-accueil {
+  grid-column: 2;
+  max-width: auto;
+  height: 700px;
+  margin-left: 5rem;
+  margin-top:-2rem;
+}
+
+.bouton-accueil a{
+    background-color: #FFCF56;
+    color: #000000;;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.8rem;
+    margin: 1rem;
+}
+
+.bouton-accueil a:hover{
+    background-color:#E88F31;
+    transition: all ease 0.3s;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::FOOTER ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+footer{
+    grid-column: 1/3;
+    grid-row: 3;
+    background-color: #fffbeb;
+    border-radius: 0 0 40px 40px;
+}
+
+.contenu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items:center
+}
+
+.footer-gauche {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-footer {
+  height: 40px;
+  margin-left: 1.5rem;
+}
+
+.footer-gauche p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-droite a {
+  color: black;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-droite a:hover {
+  color: #E88F31; 
+}
+
+/* /////////////////////////////////////////////////ABOUT/////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////ABOUT/////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////ABOUT/////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////ABOUT/////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////ABOUT/////////////////////////////////////////////// */
+
+
+#about {
+  display: grid;
+  grid-template-rows: auto auto; /* 1 ligne image+texte, 1 ligne carte */
+  grid-template-columns: 1fr; /* une seule colonne */
+  grid-column: 1 / 3;
+  background-color: #fffbeb;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+/* Ligne 1 = image + texte */
+.image-texte {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Image à gauche */
+.image-texte img {
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  justify-self: center;
+}
+
+/* Texte à droite */
+.texte-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.texte-about h1 {
+  font-family: "DynaPuff", system-ui;
+  font-size: 2.5rem;
+  color: #000000;;
+  margin-bottom: 1rem;
+}
+
+.texte-about p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  color: #000000;;
+  line-height: 1.6;
+}
+
+/* Ligne 2 = carte */
+.bloc-carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bloc-carte h2 {
+  font-family: "DynaPuff", system-ui;
+  font-size: 2rem;
+  color: #000000;;
+  margin-bottom: 2rem;
+}
+
+.carte {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////PRODUITS///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////PRODUITS///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////PRODUITS///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////PRODUITS///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////PRODUITS///////////////////////////////////////////////////////////////////////////////// */
+
+#produits h1{
+  margin-bottom: 1.5rem;
+}
+
+#produits .grille-produits{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.grille-produits{
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
+}
+
+.grille-produits img{
+  height: 400px;
+  width: auto;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.carte-produit1 {
+  grid-column: 1 / 2;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+.carte-produit2 {
+  grid-column: 2 / 3;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carte-produit3 {
+  grid-column: 3 / 4;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.grille-produits h2 {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.grille-produits .prix{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.grille-produits > div:hover {
+  transform: scale(1.02); /* grossit légèrement */
+  background-color: #FFCF56; /* couleur de survol */
+  transition: all 0.3s ease; /* animation douce */
+  cursor: pointer;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////SERVICES///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////SERVICES///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////SERVICES///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////SERVICES///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////SERVICES///////////////////////////////////////////////////////////////////////////////// */
+
+#services .grille-services{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#services h1{
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+.grille-services{
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
+}
+
+.grille-services img{
+  height: 400px;
+  width: auto;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.grille-services p {
+  margin: 1rem 1.5rem; /* haut/bas et gauche/droite */
+}
+
+.carte-service1 {
+  grid-column: 1 / 2;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carte-service2 {
+  grid-column: 2 / 3;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carte-service3 {
+  grid-column: 3 / 4;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carte-service4 {
+  grid-column: 4 / 5;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grille-services h2 {
+  margin-top: -5rem; 
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.grille-services > div:hover {
+  transform: scale(1.02); /* grossit légèrement */
+  background-color: #FFCF56; /* couleur de survol */
+  transition: all 0.3s ease; /* animation douce */
+  cursor: pointer;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////CONTACT///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////CONTACT///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////CONTACT///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////CONTACT///////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////CONTACT///////////////////////////////////////////////////////////////////////////////// */
+
+#contact{
+  background-image: url(../medias/cuillere-miel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 600px;
+    width: 400px;
+}
+
+form input, form textarea{
+    padding: 2.5%;
+    border-radius: 20px;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1rem;
+    border:solid 1px #E88F31;
+}
+
+form input{
+  cursor: pointer;
+}
+
+
+form button{
+  cursor: pointer;
+  padding: 2.5%;
+  border-radius: 20px;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: #E88F31;
+}
+
+form button:hover{
+  background-color: #FFCF56;
+  transition: 0.3s;
+}
+
+/*/////////////////////////////////////////////////////RESPONSIVE///////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////RESPONSIVE///////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////RESPONSIVE///////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////RESPONSIVE///////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////RESPONSIVE///////////////////////////////////////////////////////////////////////*/
+
+/* ======================CSS RESPONSIVE (Mobile ≤768px)====================== */
+/* ======================CSS RESPONSIVE (Mobile ≤768px)====================== */
+
+
+/* Navigation par défaut */
+.liens-nav {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Media query pour mobiles */
+@media (max-width: 768px) {
+  /* est censé cacher le input toggle :'(*/
+  #menu-toggle, .menu-label {
+    display: none;
+  }
+
+  /* Bouton menu */
+  .menu-label {
+    display: block; /* visible en mobile */
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #383838;
+    padding: 0.5rem;
+    z-index: 1100;
+  }
+
+  /* Layout général en colonne */
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  /* Ajustements du footer */
+  .footer-gauche p {
+    font-size: 0.7rem;
+  }
+  .footer-droite a {
+    font-size: 1rem;
+    margin-right: 1.1rem;
+  }
+
+  /* Menu tiroir CSS-only */
+  .liens-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #fffbeb;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 1050;
+  }
+  /* Affiche la nav lorsque toggle est activé */
+  #menu-toggle:checked + .menu-label + .liens-nav {
+    left: 0;
+  }
+  /* ===========PAGE ACCUEIL =========== */
+    /* ===========PAGE ACCUEIL =========== */
+  /* ===========PAGE ACCUEIL=========== */
+
+  /* Main et sections passent en colonne */
+  main,
+  .contenu_accueil,
+  .image-texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .miel-accueil {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+  /* ===========PAGE ABOUT =========== */
+    /* ===========PAGE ABOUT =========== */
+  /* ===========PAGE ABOUT=========== */
+
+  #about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #about img{
+      width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+
+
+  /* ===========PAGE PRODUITS & SERVICES=========== */
+    /* ===========PAGE PRODUITS & SERVICE=========== */
+  /* ===========PAGE PRODUITS & SERVICE=========== */
+
+
+  /* cartes en colonne sur pages produits & services */
+  #produits .grille-produits,
+  #services .grille-services {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #produits .grille-produits > div,
+  #services .grille-services > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  #produits .grille-produits img,
+  #services .grille-services img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ===========PAGE CONTACT=========== */
+    /* ===========PAGE CONTACT=========== */
+  /* ===========PAGE CONTACT=========== */
+
+  #contact {
+    background-image: none;
+  }
+  #contact form {
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+  }
+}
+
+
